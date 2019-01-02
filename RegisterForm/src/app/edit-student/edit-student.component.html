@@ -1,0 +1,50 @@
+
+<h3>Edit Form</h3>
+
+<form [formGroup]="studenteditForm" (ngSubmit)="save()" >
+    <table>
+        <tr>
+            <td>StudentId</td>
+           <td>
+               <input type="text" formControlName="studentid" required="required"/>
+           </td>
+           </tr>
+           <tr>
+               <td>FirstName</td>
+           <td>
+                <input type="text" formControlName="firstName" required="required"/>
+           </td>
+        </tr>
+        <tr>
+                <td>LastName</td>
+            <td>
+                 <input type="text" formControlName="lastName" required="required"/>
+            </td>
+         </tr>
+         <tr>
+                <td>Gender</td>
+            <td>
+                 <input type="text" formControlName="gender" required="required"/>
+            </td>
+         </tr>
+         <tr>
+                <td>Email</td>
+            <td>
+                 <input type="text" formControlName="email" required="required"/>
+            </td>
+         </tr>
+         <tr>
+                <td>Password</td>
+            <td>
+                 <input type="text" formControlName="pass" required="required"/>
+            </td>
+         </tr>
+         <tr>
+             <td></td>
+             <td><button type="button">Save</button> </td>
+         </tr>
+    </table>
+
+</form>
+
+

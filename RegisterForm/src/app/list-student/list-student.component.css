@@ -1,0 +1,8 @@
+table {
+    border-collapse: collapse;
+}
+
+.center {
+    margin: 0 auto;
+    width: 30%;
+}

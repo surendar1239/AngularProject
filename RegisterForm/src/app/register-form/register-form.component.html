@@ -1,0 +1,48 @@
+
+<a routerLink = "/list-student">Students_List</a>
+
+<html>
+  
+<body>
+  <div class="example-container">
+    <h2 style="text-align:center; color: green">Registeration Form:</h2><br><br />
+    </div>
+<div class="example-container">
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    <mat-card><label>Student-Id: </label>
+      &nbsp; &nbsp;<mat-form-field class="example-full-width">
+        <input matInput placeholder="enter id" formControlName="studentid">
+      </mat-form-field>
+      <mat-divider></mat-divider><br>
+      <label>FirstName: </label>
+      &nbsp; &nbsp;<mat-form-field class="example-full-width">
+        <input matInput placeholder="enetr firstName" formControlName="firstName">
+      </mat-form-field>
+      <mat-divider></mat-divider><br>
+      <label>LastName: </label>
+      &nbsp; &nbsp;<mat-form-field class="example-full-width">
+        <input matInput placeholder="enetr lastName" formControlName="lastName">
+      </mat-form-field>
+      <mat-divider></mat-divider><br>
+      <label>gender: </label>
+      &nbsp; &nbsp;<mat-form-field class="example-full-width">
+        <input matInput placeholder="enetr gender" formControlName="gender">
+      </mat-form-field>
+      <mat-divider></mat-divider><br>
+      <label>E-mail: </label>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<mat-form-field class="example-full-width">
+        <input matInput placeholder="Enter your email" formControlName="email" required>
+        <!--<mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>-->
+      </mat-form-field>
+      <mat-divider></mat-divider><br>
+      <label>Password: </label>
+      &nbsp; &nbsp;<mat-form-field class="example-full-width">
+        <input matInput placeholder="Enter your password" formControlName="pass" [type]="hide ? 'password' : 'text'">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </mat-form-field>
+     </mat-card><br>
+     <div class="center"><button mat-raised-button color="primary">Save</button></div>
+  </form>
+</div>
+</body>
+</html>

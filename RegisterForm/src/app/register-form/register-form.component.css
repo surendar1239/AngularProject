@@ -1,0 +1,29 @@
+
+body {
+    
+}
+.example-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+   
+  }
+  
+  .example-container > * {
+    width: 30%;
+    margin: 0 auto;
+}
+mat-card {
+    background-color: #DCDCDC;
+    
+}
+.example-full-width {
+    width: 70%;
+  }
+  .center {
+      width: 30%;
+      margin: 0 auto;
+  }
+  .mat-raised-button {
+      padding: 3px 48px;
+  }

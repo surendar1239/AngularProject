@@ -1,0 +1,31 @@
+<a routerLink = "/add-student">Add_Student</a>
+<div *ngIf="students" class="center">
+<table border="1">
+  <thead>
+      <tr>
+          <th>StudentId</th>
+          <th>FirstFname</th>
+          <th>lastName</th>
+          <th>Gender</th>
+          <th>Stud_Email</th>
+          <th>Password</th>
+          <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let student of students">
+          <td>{{student.studentid}}</td>
+          <td>{{student.firstName}}</td>
+          <td>{{student.lastName}}</td>
+          <td>{{student.gender}}</td>
+          <td>{{student.email}}</td>
+          <td>{{student.pass}}</td>
+          <td>
+              <button type="button" (click)="edit(student.studentid)">Edit</button> |
+              <button type="button" (click)="delete(student.studentid)">Delete</button>
+          </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+
